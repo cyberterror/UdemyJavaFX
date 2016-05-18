@@ -5,18 +5,17 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cyberterror.patterns.mvc.section3lecture5.Main">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cyberterror.patterns.mvc.section3lecture5.MainWindowController">
    <children>
-      <Label fx:id="label" alignment="CENTER" layoutY="176.0" text="Label" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Label fx:id="label" alignment="CENTER" layoutY="176.0" text="This text will change!" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER" layoutX="345.0" layoutY="209.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox alignment="CENTER" layoutX="345.0" layoutY="209.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <TextField fx:id="field" layoutX="345.0" layoutY="209.0" />
-            <Button layoutX="516.0" layoutY="209.0" mnemonicParsing="false" text="Button" />
+            <TextField fx:id="textField" layoutX="345.0" layoutY="209.0" promptText="Put any text hear!" />
+            <Button layoutX="516.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleButton" text="Change Text" />
          </children>
       </HBox>
    </children>

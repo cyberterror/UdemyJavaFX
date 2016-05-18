@@ -16,24 +16,16 @@ import java.io.IOException;
 public class Main extends Application {
 
     /**
-     * Для того чтобы иметь возможность использовать primaryStage в других частях программы мы присвом primaryStage
+     * Для того чтобы иметь возможность обращаться к primaryStage в любой другой части программы мы присвом primaryStage
      * из метода start переменной экземпляра типа Stage
      */
     private Stage primaryStage;
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-
-    /** Отвечает за запуск первого Stage нашей программы
-     * Stage - ground level of application. На нем размещаеются другие элементы
-     * */
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
 
-        // инициализируем наше основное окно
+        // Затем инициализируем наше основное окно
         mainWindow();
     }
 
@@ -55,6 +47,7 @@ public class Main extends Application {
             //подгружаем при помощи loader'а контроллер для основного окна
             // ВОТ ОНО СОЕДИЕНЕНИЕ MAIN CLASS - CONTROLLER!!!
             MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(this);
 
             // загружаем наш pane в новый scene
             Scene scene = new Scene(pane);
@@ -67,4 +60,9 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
 }
