@@ -47,15 +47,18 @@ public class Main extends Application {
          * Подгружаем наш макет MainWindowView.fxml на компоновщик типа AnchorPane, окружаем блоком try/catch так как
          * могут быть проблемы при загрузке файла*/
         try {
-            //загрузчик FXML, загружает конкретный FXML
+            //создаем экземпляр загрузчика FXML и указываем имя файла с которым будем работать
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("MainWindowView.fxml"));
-            // почему то используем AnchorPane для подгрузки на него нашего FXML (видимо используется как root элемент)
+            // используем AnchorPane (потому что это root элемент нашего FXML) для загрузки на него информации из FXML
             AnchorPane pane = loader.load();
 
             //подгружаем при помощи loader'а контроллер для основного окна
+            // ВОТ ОНО СОЕДИЕНЕНИЕ MAIN CLASS - CONTROLLER!!!
             MainWindowController mainWindowController = loader.getController();
 
-            Scene scene = new Scene(pane, 300, 300); // для scene используем нашу подруженную pane и задаем разрешение окна
+            // загружаем наш pane в новый scene
+            Scene scene = new Scene(pane);
+            // подгружаем scene в primaryStage
             primaryStage.setScene(scene);
             primaryStage.setTitle("Section 3 lecture 5");
             primaryStage.show();
