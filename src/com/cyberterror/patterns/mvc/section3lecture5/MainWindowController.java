@@ -7,6 +7,9 @@ import javafx.scene.control.TextField;
 
 /**
  * Created by CYBERTERROR on 18.05.2016.
+ * Алгоритм создания:
+ * 1. Определяем ссылку на Main класс и метод чтобы организовать на него ссылку
+ * 2. Определяем ссылки на нужные элементы вида и методы для событий
  */
 public class MainWindowController {
 

@@ -2,7 +2,14 @@ package com.cyberterror.patterns.mvc.section3lecture5;
 /**
  * Created by CYBERTERROR on 18.05.2016.
  *
- * Тут присутсвует 2 метода start и main.
+ * Тут присутсвует 2 метода start и main, а так же ссыока на primaryStage.
+ *
+ * Алгоритм создания:
+ * 1. Формируем ссылку на primaryStage как переменную экземпляра через метод start
+ * 2. В методе start запускаем метод, который инициализирует главное окно
+ * 3. В методе главного окна подгружаем FXML при помощи FXMLLoader
+ * 4. В методе главного окна подгружаем данные о контроллере в ссылку при помощи FXMLLoader
+ * 5. В методе главного окна передаем ссылку на main контроллеру через специальный метод контроллера
  */
 
 import javafx.application.Application;
@@ -16,8 +23,8 @@ import java.io.IOException;
 public class Main extends Application {
 
     /**
-     * Для того чтобы иметь возможность обращаться к primaryStage в любой другой части программы мы присвом primaryStage
-     * из метода start переменной экземпляра типа Stage
+     * Для того чтобы иметь возможность обращаться к primaryStage из любого места в любой другой части программы мы
+     * присвом primaryStage из метода start переменной экземпляра типа Stage
      */
     private Stage primaryStage;
 
@@ -44,8 +51,12 @@ public class Main extends Application {
             // используем AnchorPane (потому что это root элемент нашего FXML) для загрузки на него информации из FXML
             AnchorPane pane = loader.load();
 
-            //подгружаем при помощи loader'а контроллер для основного окна
-            // ВОТ ОНО СОЕДИЕНЕНИЕ MAIN CLASS - CONTROLLER!!!
+            /**
+             * Для того чтобы иметь возможность обращаться к контроллеру (основного окна) подгружаем данные о нем в ссылку используя
+             * используя loader который берет эти данные из FXML, после этого можно обратиться к любому методу напрямую.
+             * Это мы используем в следующей строчке чтобы создать ссылку на main в контроллере
+             *
+             * */
             MainWindowController mainWindowController = loader.getController();
             mainWindowController.setMain(this);
 
