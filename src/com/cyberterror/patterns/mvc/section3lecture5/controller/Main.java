@@ -1,4 +1,4 @@
-package com.cyberterror.patterns.mvc.section3lecture5;
+package com.cyberterror.patterns.mvc.section3lecture5.controller;
 /**
  * Created by CYBERTERROR on 18.05.2016.
  *
@@ -47,7 +47,7 @@ public class Main extends Application {
          * могут быть проблемы при загрузке файла*/
         try {
             //создаем экземпляр загрузчика FXML и указываем имя файла с которым будем работать
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("MainWindowView.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/MainWindowView.fxml"));
             // используем AnchorPane (потому что это root элемент нашего FXML) для загрузки на него информации из FXML
             AnchorPane pane = loader.load();
 
