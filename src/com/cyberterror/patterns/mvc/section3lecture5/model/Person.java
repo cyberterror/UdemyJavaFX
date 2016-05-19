@@ -39,6 +39,8 @@ public class Person {
         this.lastName = lastName;
     }
 
+    public Person() {}
+
     /**
      * Определяем сеттеры и геттеры для данных, которые хранит класс
      */
