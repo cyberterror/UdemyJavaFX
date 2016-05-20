@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cyberterror.additionalwindows.controller.MainWindowController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Start Window" />
+      <VBox alignment="CENTER" layoutX="53.0" layoutY="84.0" spacing="20.0" AnchorPane.leftAnchor="30.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" layoutX="53.0" layoutY="84.0" spacing="20.0">
+               <children>
+                  <Label layoutX="53.0" layoutY="84.0" text="New Window" />
+                  <Button layoutX="124.0" layoutY="89.0" mnemonicParsing="false" onAction="#openNewWindow" text="Button" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="53.0" layoutY="114.0" spacing="20.0">
+               <children>
+                  <Label layoutX="53.0" layoutY="114.0" text="Change This Window" />
+                  <Button layoutX="124.0" layoutY="123.0" mnemonicParsing="false" onAction="#changeWindow" text="Button" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
