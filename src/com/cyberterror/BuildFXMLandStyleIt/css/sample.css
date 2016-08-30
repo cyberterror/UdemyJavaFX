@@ -1,0 +1,23 @@
+.title {
+    -fx-font-family: serif;
+    -fx-font-size: 80;
+    -fx-fill: aqua;
+}
+
+.root {
+    -fx-font-family: serif;
+    -fx-font-size: 15;
+    -fx-vgap: 10;
+    -fx-hgap: 10;
+    -fx-alignment: center;
+}
+
+.text-field {
+    -fx-font-family: Helvetica;
+}
+
+#firstNameTextField {
+    -fx-background-color: black;
+    -fx-text-fill: blue;
+}
+
